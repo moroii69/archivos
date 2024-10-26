@@ -34,7 +34,9 @@ export async function POST(request: Request) {
   try {
     await transporter.sendMail(mailOptions);
     return NextResponse.json({ success: true });
-  } catch (error) {
-    return NextResponse.json({ success: false, error: error.message });
-  }
+} catch (error) {
+    return NextResponse.json({
+        success: false,
+        error: (error as Error).message, // Type assertion to Error
+    });
 }

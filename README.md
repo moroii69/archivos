@@ -4,7 +4,7 @@
 
 Archivos provides easy access to academic resources, helping you excel in your studies.
 
-![Image](/image.png)
+<img src="/image.png" alt="Home" style="width: 70%;">
 
 ## License
 

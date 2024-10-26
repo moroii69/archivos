@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ChevronRight, BookOpen, Clock, Upload } from 'lucide-react'
 import { Button } from "@/components/ui/button"
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function HomePage() {
   const [hoveredSemester, setHoveredSemester] = useState<number | null>(null)

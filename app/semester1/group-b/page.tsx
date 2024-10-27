@@ -6,65 +6,65 @@ import { Download } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 
+// Define items with empty href properties
 const resourceCategories = [
   {
     title: "Question Banks",
     items: [
-      "Mathematics Question Bank",
-      "Physics Question Bank",
-      "Chemistry Question Bank",
-      "Computer Science Question Bank",
-      "English Question Bank"
+      { name: "Mathematics - 1", href: "https://firebasestorage.googleapis.com/v0/b/archivos-cs30.appspot.com/o/Semester%2001%2FGroup%20B%2FQuestion%20Banks%2Fm1-qb.pdf?alt=media&token=8b7e40cf-1fde-4dd1-ace0-50038b58387e" },
+      { name: "Engineering Physics", href: "https://firebasestorage.googleapis.com/v0/b/archivos-cs30.appspot.com/o/Semester%2001%2FGroup%20B%2FQuestion%20Banks%2Fep-qb.pdf?alt=media&token=2dd3af71-d919-4bfc-b60b-76386cc877b7" },
+      { name: "Programming for Problem Solving", href: "https://firebasestorage.googleapis.com/v0/b/archivos-cs30.appspot.com/o/Semester%2001%2FGroup%20B%2FQuestion%20Banks%2Fpps-qb.pdf?alt=media&token=696aefb9-67e2-40b5-a0a6-1ef4eccd85fe" },
+      { name: "Basic Electrical Engineering", href: "https://firebasestorage.googleapis.com/v0/b/archivos-cs30.appspot.com/o/Semester%2001%2FGroup%20B%2FQuestion%20Banks%2Fbee-qb.pdf?alt=media&token=64600540-61a6-4572-a04b-def854b6052b" },
+      { name: "Environmental Science", href: "https://firebasestorage.googleapis.com/v0/b/archivos-cs30.appspot.com/o/Semester%2001%2FGroup%20B%2FQuestion%20Banks%2Fes-qb.pdf?alt=media&token=2827edab-4216-4c6d-a3ce-9e2ebd3d69e6"},
     ]
   },
   {
     title: "CIE 1 Question Papers",
     items: [
-      "Mathematics CIE 1",
-      "Physics CIE 1",
-      "Chemistry CIE 1",
-      "Computer Science CIE 1",
-      "English CIE 1"
+      { name: "Mathematics - 1", href: "" },
+      { name: "Engineering Physics", href: "" },
+      { name: "Programming for Problem Solving", href: "" },
+      { name: "Basic Electrical Engineering", href: "" },
+      { name: "Environmental Science", href: "" },
     ]
   },
   {
     title: "CIE 2 Question Papers",
     items: [
-      "Mathematics CIE 2",
-      "Physics CIE 2",
-      "Chemistry CIE 2",
-      "Computer Science CIE 2",
-      "English CIE 2"
+      { name: "Mathematics - 1", href: "" },
+      { name: "Engineering Physics", href: "" },
+      { name: "Programming for Problem Solving", href: "" },
+      { name: "Basic Electrical Engineering", href: "" },
+      { name: "Environmental Science", href: "" },
     ]
   },
   {
     title: "SEE Question Papers",
     items: [
-      "Mathematics SEE",
-      "Physics SEE",
-      "Chemistry SEE",
-      "Computer Science SEE",
-      "English SEE"
+      { name: "Mathematics - 1", href: "" },
+      { name: "Engineering Physics", href: "" },
+      { name: "Programming for Problem Solving", href: "" },
+      { name: "Basic Electrical Engineering", href: "" },
+      { name: "Environmental Science", href: "" },
     ]
   },
   {
     title: "Pre-Final Question Papers",
     items: [
-      "Mathematics Pre-Final",
-      "Physics Pre-Final",
-      "Chemistry Pre-Final",
-      "Computer Science Pre-Final",
-      "English Pre-Final"
+      { name: "Mathematics - 1", href: "" },
+      { name: "Engineering Physics", href: "" },
+      { name: "Programming for Problem Solving", href: "" },
+      { name: "Basic Electrical Engineering", href: "" },
+      { name: "Environmental Science", href: "" },
     ]
   },
   {
     title: "Lab Manuals",
     items: [
-      "Physics Lab Manual",
-      "Chemistry Lab Manual",
-      "Computer Science Lab Manual",
-      "Electronics Lab Manual",
-      "Workshop Manual"
+      { name: "Engineering Physics Lab", href: "" },
+      { name: "Programming for Problem Solving Lab", href: "" },
+      { name: "Basic Electrical Engineering Lab", href: "" },
+      { name: "Engineering Graphics & Design Practice Lab", href: "" }
     ]
   }
 ]
@@ -105,11 +105,13 @@ export default function ResourcesPage() {
                   <ul className="space-y-3">
                     {category.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex justify-between items-center">
-                        <span className="text-sm">{item}</span>
-                        <Button variant="ghost" size="sm" className="text-blue-500 hover:text-blue-700">
-                          <Download className="w-4 h-4" />
-                          <span className="sr-only">Download {item}</span>
-                        </Button>
+                        <span className="text-sm">{item.name}</span>
+                        <Link href={item.href}>
+                          <Button variant="ghost" size="sm" className="text-blue-500 hover:text-blue-700">
+                            <Download className="w-4 h-4" />
+                            <span className="sr-only">Download {item.name}</span>
+                          </Button>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -122,7 +124,7 @@ export default function ResourcesPage() {
 
       <footer className="text-center pb-4">
         <p className="text-sm text-white bg-gray-800 px-3 py-1 rounded-full inline-block">
-          semester 1 - group b
+          semester 1 - group a
         </p>
       </footer>
     </div>

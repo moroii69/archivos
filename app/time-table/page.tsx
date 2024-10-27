@@ -216,6 +216,8 @@ export default function TimetablePage() {
   const sections = department && isDepartment(department) 
     ? Object.keys(subjectsData[department]) 
     : [];
+
+  console.log(subjectsData)
   
   
   return (

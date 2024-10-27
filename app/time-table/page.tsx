@@ -180,6 +180,8 @@ const subjectsData = {
     },
   };
   
+  //log for vercel error
+  console.log(subjectsData)
 
 export default function TimetablePage() {
     type SubjectsData = {
@@ -217,7 +219,6 @@ export default function TimetablePage() {
     ? Object.keys(subjectsData[department]) 
     : [];
 
-  console.log(subjectsData)
   
   
   return (

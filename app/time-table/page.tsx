@@ -182,6 +182,14 @@ const subjectsData = {
   
 
 export default function TimetablePage() {
+    type SubjectsData = {
+        [department in 'CSE' | 'CSD' | 'CSM' | 'AIML' | 'IT' | 'CE' | 'MECH' | 'ECE']: {
+          [section: string]: {
+            [day: string]: string[];
+          };
+        };
+      };
+      
   const [department, setDepartment] = useState<string>('');
   const [section, setSection] = useState<string>('');
   const [mounted, setMounted] = useState(false);
@@ -194,9 +202,22 @@ export default function TimetablePage() {
     return null;
   }
 
-  const departments = ['CSE', 'CSD', 'CSM', 'AIML', 'IT', 'CE', 'MECH', 'ECE'];
-  const sections = department ? Object.keys(subjectsData[department]) : [];
+  const departments = ['CSE', 'CSD', 'CSM', 'AIML', 'IT', 'CE', 'MECH', 'ECE'] as const;
 
+  // Create a type for the department keys
+  type Department = typeof departments[number];
+  
+  // Type guard to check if a value is a valid department
+  const isDepartment = (value: string): value is Department => {
+    return departments.includes(value as Department);
+  };
+  
+  // Assuming `department` is a string that is set somewhere in your code
+  const sections = department && isDepartment(department) 
+    ? Object.keys(subjectsData[department]) 
+    : [];
+  
+  
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans">
       <header className="fixed top-0 left-0 right-0 bg-white bg-opacity-90 backdrop-blur-md z-10">
@@ -265,11 +286,12 @@ export default function TimetablePage() {
                       <TableCell className="font-medium">{day}</TableCell>
                       {periods.map((_, periodIndex) => (
                         <TableCell key={periodIndex}>
-                          <div className="text-center font-medium">
-                            {/* Access the subjects for the selected day and period */}
-                            {subjectsData[department][section][day][periodIndex] || 'N/A'}
-                          </div>
-                        </TableCell>
+  <div className="text-center font-medium">
+    {/* Access the subjects for the selected day and period with optional chaining */}
+    {subjectsData[department]?.[section]?.[day]?.[periodIndex] ?? 'N/A'}
+  </div>
+</TableCell>
+
                       ))}
                     </TableRow>
                   ))}

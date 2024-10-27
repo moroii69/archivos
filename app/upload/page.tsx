@@ -47,7 +47,7 @@
         }
         }
     }
-
+    
     const simulateUpload = () => {
         setUploadProgress(0)
         setIsUploaded(false)

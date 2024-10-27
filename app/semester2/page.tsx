@@ -125,7 +125,7 @@ export default function Semester2ComingSoonPage() {
               Hold onto your socks – Semester 2’s cooking up! Almost as thrilling as a taco truck chase!
             </p>
             <div className="mb-8">
-            <p className="text-sm text-gray-500 mb-2">Progress (Or as I call it, "Slooooow Torture")</p>
+            <p className="text-sm text-gray-500 mb-2">Progress (Or as I call it, &quot;Slooooow Torture&quot;)</p>
               <Progress value={30} className="w-full h-2" />
             </div>
             <p className="text-lg font-semibold mb-8">

@@ -25,9 +25,6 @@ const subjectsData = {
     C: {
       // Add subjects for section C here
     },
-    C: {
-      // subjects for section C here
-    },
     D: {
       // subjects for section D here
     },

@@ -10,95 +10,176 @@ const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'
 const periods = ['9:30 - 10:30', '10:30 - 11:30', '11:30 - 12:30', '12:30 - 1:30', '1:30 - 2:30', '2:30 - 3:30', '3:30 - 4:30'];
 
 const subjectsData = {
-  CSE: {
-    A: {
-      Monday: ['ES', 'BEE', 'EP', 'LUNCH', 'M1', 'M1', 'PPS'],
-      Tuesday: ['EP', 'M1', 'MC', 'LUNCH', 'PPS LAB', 'PPS LAB', 'PPS LAB'],
-      Wednesday: ['EGDP LAB', 'EGDP LAB', 'EGDP LAB', 'LUNCH', 'OC', 'PPS', 'SPORTS'],
-      Thursday: ['BEE', 'ES', 'LIBRARY', 'LUNCH', 'EP LAB', 'EP LAB', 'EP LAB'],
-      Friday: ['EP', 'PPS', 'M1', 'LUNCH', 'NAMAZ', 'BEE', 'ES'],
-      Saturday: ['BEE LAB', 'BEE LAB', 'BEE LAB', 'LUNCH', 'EP', 'BEE', 'PPS'],
+    CSE: {
+      A: {
+        Monday: ['ES', 'BEE', 'EP', 'LUNCH', 'M1', 'M1', 'PPS'],
+        Tuesday: ['EP', 'M1', 'MC', 'LUNCH', 'PPS LAB', 'PPS LAB', 'PPS LAB'],
+        Wednesday: ['EGDP LAB', 'EGDP LAB', 'EGDP LAB', 'LUNCH', 'OC', 'PPS', 'SPORTS'],
+        Thursday: ['BEE', 'ES', 'LIBRARY', 'LUNCH', 'EP LAB', 'EP LAB', 'EP LAB'],
+        Friday: ['EP', 'PPS', 'M1', 'LUNCH', 'NAMAZ', 'BEE', 'ES'],
+        Saturday: ['BEE LAB', 'BEE LAB', 'BEE LAB', 'LUNCH', 'EP', 'BEE', 'PPS'],
+      },
+      B: {
+        Monday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Tuesday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+        Wednesday: ['sub1', 'sub1', 'sub1', 'LUNCH', 'sub2', 'sub3', 'sub3'],
+        Thursday: ['sub3', 'sub1', 'sub2', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Friday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Saturday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+      },
+      C: {
+        Monday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub2', 'sub3', 'sub1'],
+        Tuesday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub2', 'sub1', 'sub3'],
+        Wednesday: ['sub3', 'sub1', 'sub2', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Thursday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub2', 'sub3', 'sub1'],
+        Friday: ['sub2', 'sub1', 'sub3', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+        Saturday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub1', 'sub3', 'sub2'],
+      },
+      D: {
+        Monday: ['sub3', 'sub1', 'sub2', 'LUNCH', 'sub2', 'sub1', 'sub3'],
+        Tuesday: ['sub1', 'sub3', 'sub2', 'LUNCH', 'sub1', 'sub3', 'sub2'],
+        Wednesday: ['sub2', 'sub1', 'sub3', 'LUNCH', 'sub3', 'sub2', 'sub1'],
+        Thursday: ['sub1', 'sub3', 'sub2', 'LUNCH', 'sub2', 'sub1', 'sub3'],
+        Friday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Saturday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+      },
+      E: {
+        Monday: ['sub2', 'sub1', 'sub3', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+        Tuesday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub2', 'sub3', 'sub1'],
+        Wednesday: ['sub1', 'sub3', 'sub2', 'LUNCH', 'sub2', 'sub1', 'sub3'],
+        Thursday: ['sub3', 'sub1', 'sub2', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Friday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub3', 'sub2', 'sub1'],
+        Saturday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub1', 'sub3', 'sub2'],
+      },
+      F: {
+        Monday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub2', 'sub1', 'sub3'],
+        Tuesday: ['sub2', 'sub1', 'sub3', 'LUNCH', 'sub1', 'sub3', 'sub2'],
+        Wednesday: ['sub1', 'sub3', 'sub2', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+        Thursday: ['sub3', 'sub1', 'sub2', 'LUNCH', 'sub2', 'sub1', 'sub3'],
+        Friday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub3', 'sub2', 'sub1'],
+        Saturday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+      },
     },
-    B: {
-      // Add subjects for section B here
+    CSD: {
+      A: {
+        Monday: ['Math', 'Science', 'English', 'History'],
+        Tuesday: ['Biology', 'Physics', 'Math', 'Geography'],
+        Wednesday: ['Math', 'Lab', 'English', 'History'],
+        Thursday: ['Chemistry', 'PE', 'English', 'Geography'],
+        Friday: ['History', 'Math', 'PE', 'Biology'],
+        Saturday: ['English', 'Geography', 'Math', 'Physics'],
+      },
+      B: {
+        Monday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Tuesday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+        Wednesday: ['sub1', 'sub1', 'sub1', 'LUNCH', 'sub2', 'sub3', 'sub3'],
+        Thursday: ['sub3', 'sub1', 'sub2', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Friday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Saturday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+      },
     },
-    C: {
-      // Add subjects for section C here
+    CSM: {
+      A: {
+        Monday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Tuesday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+        Wednesday: ['sub1', 'sub1', 'sub1', 'LUNCH', 'sub2', 'sub3', 'sub3'],
+        Thursday: ['sub3', 'sub1', 'sub2', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Friday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Saturday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+      },
+      B: {
+        Monday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Tuesday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+        Wednesday: ['sub1', 'sub1', 'sub1', 'LUNCH', 'sub2', 'sub3', 'sub3'],
+        Thursday: ['sub3', 'sub1', 'sub2', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Friday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Saturday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+      },
+      C: {
+        Monday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Tuesday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+        Wednesday: ['sub1', 'sub1', 'sub1', 'LUNCH', 'sub2', 'sub3', 'sub3'],
+        Thursday: ['sub3', 'sub1', 'sub2', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Friday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Saturday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+      },
     },
-    D: {
-      // subjects for section D here
+    AIML: {
+      A: {
+        Monday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Tuesday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+        Wednesday: ['sub1', 'sub1', 'sub1', 'LUNCH', 'sub2', 'sub3', 'sub3'],
+        Thursday: ['sub3', 'sub1', 'sub2', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Friday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Saturday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+      },
+      B: {
+        Monday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Tuesday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+        Wednesday: ['sub1', 'sub1', 'sub1', 'LUNCH', 'sub2', 'sub3', 'sub3'],
+        Thursday: ['sub3', 'sub1', 'sub2', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Friday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Saturday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+      },
     },
-    E: {
-      // subjects for section E here
+    IT: {
+      A: {
+        Monday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Tuesday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+        Wednesday: ['sub1', 'sub1', 'sub1', 'LUNCH', 'sub2', 'sub3', 'sub3'],
+        Thursday: ['sub3', 'sub1', 'sub2', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Friday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Saturday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+      },
+      B: {
+        Monday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Tuesday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+        Wednesday: ['sub1', 'sub1', 'sub1', 'LUNCH', 'sub2', 'sub3', 'sub3'],
+        Thursday: ['sub3', 'sub1', 'sub2', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Friday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Saturday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+      },
+      C: {
+        Monday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Tuesday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+        Wednesday: ['sub1', 'sub1', 'sub1', 'LUNCH', 'sub2', 'sub3', 'sub3'],
+        Thursday: ['sub3', 'sub1', 'sub2', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Friday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Saturday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+      },
     },
-    F: {
-      // subjects for section F here
+    CE: {
+      A: {
+        Monday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Tuesday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+        Wednesday: ['sub1', 'sub1', 'sub1', 'LUNCH', 'sub2', 'sub3', 'sub3'],
+        Thursday: ['sub3', 'sub1', 'sub2', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Friday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Saturday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+      },
     },
-    G: {
-      // subjects for section G here
-    }
-  },
-  CSD: {
-    A: {
-      Monday: ['Math', 'Science', 'English', 'History'],
-      Tuesday: ['Biology', 'Physics', 'Math', 'Geography'],
-      Wednesday: ['Math', 'Lab', 'English', 'History'],
-      Thursday: ['Chemistry', 'PE', 'English', 'Geography'],
-      Friday: ['History', 'Math', 'PE', 'Biology'],
-      Saturday: ['English', 'Geography', 'Math', 'Physics'],
+    MECH: {
+      A: {
+        Monday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Tuesday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+        Wednesday: ['sub1', 'sub1', 'sub1', 'LUNCH', 'sub2', 'sub3', 'sub3'],
+        Thursday: ['sub3', 'sub1', 'sub2', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Friday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Saturday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+      },
     },
-    B: {
-      // subjects for section B here
-    }
-    
-  },
-  CSM: {
-    A: {
-      // subjects for section A here
+    ECE: {
+      A: {
+        Monday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Tuesday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+        Wednesday: ['sub1', 'sub1', 'sub1', 'LUNCH', 'sub2', 'sub3', 'sub3'],
+        Thursday: ['sub3', 'sub1', 'sub2', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Friday: ['sub2', 'sub3', 'sub1', 'LUNCH', 'sub1', 'sub2', 'sub3'],
+        Saturday: ['sub1', 'sub2', 'sub3', 'LUNCH', 'sub3', 'sub1', 'sub2'],
+      },
     },
-    B: {
-      // subjects for section B here
-    },
-    C: {
-      // subjects for section C here
-    }
-    },
-  AIML: {
-    A: {
-      // subjects for section A here
-    },
-    B: {
-      // subjects for section B here
-    },
-  },
-  IT: {
-    A: {
-      // subjects for section A here
-    },
-    B: {
-      // subjects for section B here
-    },
-    C: {
-      // subjects for section C here
-
-    }
-  },
-  CE: {
-    A: {
-      // Add subjects for section A here
-    },
-  },
-  MECH: {
-    A: {
-      // Add subjects for section A here
-    },
-  },
-  ECE: {
-    A: {
-      // Add subjects for section A here
-    },
-  },
-};
+  };
+  
 
 export default function TimetablePage() {
   const [department, setDepartment] = useState<string>('');

@@ -12,11 +12,11 @@ const resourceCategories = [
     title: "Question Banks",
     items: [
       { name: "Mathematics - 1", href: "https://firebasestorage.googleapis.com/v0/b/archivos-cs30.appspot.com/o/Semester%2001%2FGroup%20A%2FQuestion-Banks%2Fm1-qb.pdf?alt=media&token=5b89ec92-1dbb-4e02-b4e2-52af3e9dad90" },
-      { name: "Engineering Chemistry", href: "" },
+      { name: "Engineering Chemistry", href: "https://firebasestorage.googleapis.com/v0/b/archivos-cs30.appspot.com/o/Semester%2001%2FGroup%20A%2FQuestion-Banks%2Fec-qb.pdf?alt=media&token=2d954d89-d233-47df-9e38-a7b8af7f52d5" },
       { name: "Python Programming", href: "" },
-      { name: "English for Professional Communication", href: "" },
-      { name: "Universal Human Values", href: "" },
-      { name: "Indian Constitution", href: "" }
+      { name: "English for Professional Communication", href: "https://firebasestorage.googleapis.com/v0/b/archivos-cs30.appspot.com/o/Semester%2001%2FGroup%20A%2FQuestion-Banks%2Fepc-qb.pdf?alt=media&token=fe7db331-027a-4445-8d32-5999c381b7c7" },
+      { name: "Universal Human Values", href: "https://firebasestorage.googleapis.com/v0/b/archivos-cs30.appspot.com/o/Semester%2001%2FGroup%20A%2FQuestion-Banks%2Fuhv-qb.pdf?alt=media&token=1e033870-92e3-4440-9871-6d3876bdce2e" },
+      { name: "Indian Constitution", href: "https://firebasestorage.googleapis.com/v0/b/archivos-cs30.appspot.com/o/Semester%2001%2FGroup%20A%2FQuestion-Banks%2Fic-qb.pdf?alt=media&token=8346e4ea-54f3-4ff7-ae6e-1f44c7e799dd" }
     ]
   },
   {

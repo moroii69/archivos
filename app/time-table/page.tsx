@@ -182,7 +182,7 @@ export default function TimetablePage() {
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {days.map((day, dayIndex) => (
+                  {days.map((day) => (
                     <TableRow key={day}>
                       <TableCell className="font-medium">{day}</TableCell>
                       {periods.map((_, periodIndex) => (

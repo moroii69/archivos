@@ -32,7 +32,7 @@ export default function NotFoundPage() {
           >
             <h2 className="text-3xl font-semibold mb-4">Page Not Found</h2>
             <p className="text-xl text-gray-600 mb-8 max-w-md mx-auto">
-              Oops! The page you're looking for doesn't exist or has been moved.
+              Oops! The page you&apos;re looking for doesn&apos;t exist or has been moved.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
               <Button asChild>

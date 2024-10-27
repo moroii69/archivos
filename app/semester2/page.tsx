@@ -43,50 +43,35 @@ export default function GroupSelectionPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <Link 
-              href="/semester1/group-a" 
-              onMouseEnter={() => setHoveredGroup('A')}
-              onMouseLeave={() => setHoveredGroup(null)}
-            >
-              <Button
+            {['A', 'B'].map((group) => (
+              <Link 
+                key={group} 
+                href={`/resources/${group.toLowerCase()}`}
+                onMouseEnter={() => setHoveredGroup(group)}
+                onMouseLeave={() => setHoveredGroup(null)}
+              >
+                <Button
                 variant="outline"
                 className={`px-8 py-6 text-xl font-semibold rounded-2xl transition-all duration-300 ${
-                  hoveredGroup === 'A' ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-900'
+                  hoveredGroup === group ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-900'
                 }`}
               >
-               Group A
-                <ChevronRight className={`ml-2 transition-transform duration-300 ${
-                  hoveredGroup === 'A' ? 'translate-x-1' : ''
-                }`} />
-              </Button>
-            </Link>
-
-            <Link 
-              href="/semester1/group-b" 
-              onMouseEnter={() => setHoveredGroup('B')}
-              onMouseLeave={() => setHoveredGroup(null)}
-            >
-              <Button
-                variant="outline"
-                className={`px-8 py-6 text-xl font-semibold rounded-2xl transition-all duration-300 ${
-                  hoveredGroup === 'B' ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-900'
-                }`}
-              >
-                Group B
-                <ChevronRight className={`ml-2 transition-transform duration-300 ${
-                  hoveredGroup === 'B' ? 'translate-x-1' : ''
-                }`} />
-              </Button>
-            </Link>
+                  Group {group}
+                  <ChevronRight className={`ml-2 transition-transform duration-300 ${
+                    hoveredGroup === group ? 'translate-x-1' : ''
+                  }`} />
+                </Button>
+              </Link>
+            ))}
           </motion.div>
         </section>
       </main>
-
       <footer className="text-center pb-4">
         <p className="text-sm text-white bg-gray-800 px-3 py-1 rounded-full inline-block">
-          semester 1
+          semester 2
         </p>
       </footer>
+
     </div>
   )
 }

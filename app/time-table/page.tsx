@@ -180,9 +180,13 @@ const subjectsData = {
     },
   };
   
-  //log for vercel error
-  console.log(subjectsData)
+  const YourComponent = () => {
+    useEffect(() => {
+        console.log(subjectsData);
+    }, []); // runs only once when the component mounts
 
+    return null; // no rendering, just logging
+};
 export default function TimetablePage() {
     type SubjectsData = {
         [department in 'CSE' | 'CSD' | 'CSM' | 'AIML' | 'IT' | 'CE' | 'MECH' | 'ECE']: {
@@ -289,11 +293,10 @@ export default function TimetablePage() {
                       <TableCell className="font-medium">{day}</TableCell>
                       {periods.map((_, periodIndex) => (
                         <TableCell key={periodIndex}>
-  <div className="text-center font-medium">
-    {/* Access the subjects for the selected day and period with optional chaining */}
-    {subjectsData[department]?.[section]?.[day]?.[periodIndex] ?? 'N/A'}
-  </div>
-</TableCell>
+                            <div className="text-center font-medium">
+                                {subjectsData[department]?.[section]?.[day]?.[periodIndex] ?? 'N/A'}
+                            </div>
+                        </TableCell>
 
                       ))}
                     </TableRow>

@@ -124,7 +124,7 @@ export default function ResourcesPage() {
 
       <footer className="text-center pb-4">
         <p className="text-sm text-white bg-gray-800 px-3 py-1 rounded-full inline-block">
-          semester 1 - group a
+          semester 1 - group b
         </p>
       </footer>
     </div>

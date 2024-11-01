@@ -67,6 +67,14 @@ const subjectsData: SubjectsData = {
         Friday: ['ES', 'M1', 'PPS', 'LUNCH', 'NAMAZ', 'BEE', 'PPS'],
         Saturday: ['M1', 'EPS', 'EP', 'LUNCH', 'EP LAB', 'EP LAB', 'EP LAB'],
       },
+      G: {
+        Monday: ['EP', 'PPS', 'BEE', 'LUNCH', 'ES', 'EP', 'EP'],
+        Tuesday: ['EP LAB', 'EP LAB', 'EP LAB', 'LUNCH', 'BEE', 'M1', 'PPS'],
+        Wednesday: ['M1', 'M1', 'ES', 'LUNCH', 'PPS LAB', 'PPS LAB', 'PPS LAB'],
+        Thursday: ['PPS', 'EP', 'BEE', 'LUNCH', 'EGDP', 'EGDP', 'EGDP'],
+        Friday: ['BEE LAB', 'BEE LAB', 'BEE LAB', 'LUNCH', 'NAMAZ', 'EP', 'BEE'],
+        Saturday: ['PPS', 'M1', 'M1', 'LUNCH', 'BEE', 'ES', 'PPS']
+          } 
     },
     CSD: {
       A: {

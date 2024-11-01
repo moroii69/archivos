@@ -126,7 +126,7 @@ export default function ResourcesPage() {
           </motion.div>
         </section>
       </main>
-
+      
       <footer className="text-center pb-4">
         <p className="text-sm text-white bg-gray-800 px-3 py-1 rounded-full inline-block">
           semester 1 - group a
